@@ -1,4 +1,3 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from '../../Components/Navbar/Navbar'
 import About from '../About/About'
