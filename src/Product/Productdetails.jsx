@@ -11,11 +11,13 @@ const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
   const {addToWishlist} = useContext(WishlistContext);
 
+  const [quantity, setQuantity] = useState(1); 
+
   const product = Data.find(p => p._id === Number(_id));
 
-if (!product) return <p>Product not found!</p>; // ✅ move this UP
+  if (!product) return <p>Product not found!</p>; 
 
-const [quantity, setQuantity] = useState(1); // ✅ now safe
+
 
   const increaseQuantity = () => setQuantity(prev => prev + 1);
   const decreaseQuantity = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
