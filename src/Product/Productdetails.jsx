@@ -14,10 +14,10 @@ const ProductDetails = () => {
   const product = Data.find(p => p._id === Number(_id));
 
   
+  const [quantity, setQuantity] = useState(1);
+  
   if (!product) return <p>Product not found!</p>;
 
-  
-  const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => setQuantity(prev => prev + 1);
   const decreaseQuantity = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
