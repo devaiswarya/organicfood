@@ -1,0 +1,364 @@
+.wholeclass{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-top: 30px;
+    /* padding-bottom: 30px; */
+    background-color: rgb(240, 237, 237);
+}
+.firstclass{
+    /* border: 1px solid blue; */
+    width: 82%;
+    height: 280px;
+    margin: auto;
+    display: flex;
+    position: relative;
+    padding: 30px;
+    background-color: white;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.second{
+    position: absolute;
+    right: 80px;
+    top: -120px;
+}
+.whole{
+    position: absolute;
+    right: 380px;
+    bottom: -15px;
+}
+.f1{
+    font-size: 25px;
+    font-family: var(--secondary-root);
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    color: black;
+}
+.f2{
+    font-size: 13px;
+    font-family: var(--secondary-root);
+    font-weight: 400;
+    letter-spacing: 1.7px;
+    color: black;
+}
+.f3{
+    font-size: 13px;
+    font-family: var(--secondary-root);
+    font-weight: 400;
+    color: white;
+    background-color: #008000;
+    border: 1px solid;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.secondclass{
+    /* border: 1px solid red; */
+    width: 82%;
+    margin: auto;
+    margin-top: 30px;
+}
+.secondfull{
+    /* border: 1px solid blue; */
+    font-size: 22px;
+    font-weight: 500;
+    font-family: var(--secondary-root);
+    letter-spacing: 1.7px;
+}
+.secondchild{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.king{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.king1{
+   /* border: 1px solid; */
+   width: 180px;
+   background-color: #FF682F;
+     height: 170px;
+         display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 800;
+      font-size: 55px;
+      border-radius: 10px;
+}
+.king2{
+    /* border: 1px solid; */
+      width: 180px;
+      background-color: #039D02;
+          height: 170px;
+         display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 800;
+      font-size: 55px;
+      border-radius: 10px;
+}
+.king3{
+    /* border: 1px solid; */
+      width: 180px;
+      background-color: #3833DF;
+         height: 170px;
+         display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 800;
+      font-size: 55px;
+      border-radius: 10px;
+}
+.king4{
+    /* border: 1px solid; */
+      width: 180px;
+      background-color: #11DDD0;
+        height: 170px;
+         display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 800;
+      font-size: 55px;
+      border-radius: 10px;
+}
+.king5{
+    /* border: 1px solid; */
+      width: 180px;
+      height: 170px;
+      background-color: #06DD27;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 800;
+      font-size: 55px;
+      border-radius: 10px;
+}
+.m1{
+    font-size: 17px;
+    font-family: var(--secondary-root);
+    font-weight: 400;
+    text-align: center;
+}
+.thirdclass{
+    /* border: 1px solid ; */
+    width: 82%;
+    height: 300px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+
+}
+.thirdchild1{
+    /* border: 1px solid; */
+    width: 50%;
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+}
+.thirdchild2{
+    /* border: 1px solid; */
+    width: 50%;
+    display: flex;
+    background-color: #FFF1F8;
+    border-radius: 20px;
+}
+.m2{
+    font-size: 35px;
+    font-family: var(--secondary-root);
+    font-weight: 600;
+}
+.inchild{
+    /* border: 1px solid; */
+    width: 50%;
+    padding: 30px;
+    
+}
+.herit{
+    /* border: 1px solid ; */
+    width: 50%;
+}
+.herit img {
+    width: 100%;
+    height: 100%;
+}
+.m3{
+    /* border: 1px solid ; */
+    width: 90px;
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--secondary-root);
+}
+@media screen and (min-width:320px) and (max-width:768px){
+    .wholeclass{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .firstclass{
+        width: 96%;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+    .second{
+        top: 150px !important;
+        left: 20px;
+    }
+    .whole{
+        display: none;
+    }
+    .secondclass{
+        width: 94%;
+    }
+    .secondchild{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .thirdclass{
+        width: 96%;
+        height: 400px;
+        gap: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .thirdchild1{
+        width: 100%;
+        height: 50%;
+    }
+       .thirdchild2{
+        width: 100%;
+        height: 50%;
+    }
+    .inchild{
+        padding: 5px;
+        display: flex;
+    flex-direction: column;
+       gap: 6px;    }
+}
+
+@media screen and (min-width:769px) and (max-width:992px){
+    .wholeclass{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .firstclass{
+        width: 96%;
+        height: 300px;
+    }
+    .second{
+        right: -35px;
+        top: -100px;
+    }
+    .whole{
+        display: none;
+    }
+    .f1{
+        font-size: 20px;
+    }
+    .secondclass{
+        width: 94%;
+    }
+    .secondchild{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 50px;
+        
+    }
+        .thirdclass{
+        width: 96%;
+        height: 300px;
+        gap: 10px;
+        padding: 10px;
+        display: flex;
+        margin-top: 10px;
+    }
+    .thirdchild1{
+        width: 50%;
+        height: 100%;
+    }
+       .thirdchild2{
+        width: 50%;
+        height: 100%;
+    }
+    .inchild{
+        padding: 30px;
+        display: flex;
+          flex-direction: column;
+       gap: 6px;   
+    
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1200px){
+    .wholeclass{
+        width: 100%;
+        padding: 6px;
+    }
+    .firstclass{
+        width: 98%;
+        height: 300px;
+    }
+    .second{
+        right: -50px;
+        top: -103px;
+    }
+    .whole{
+        right: 180px;
+    }
+    .secondclass{
+        width: 98%;
+    }
+    .secondchild{
+        display: flex;
+        gap: 10px;
+    }
+         .thirdclass{
+        width: 96%;
+        height: 300px;
+        gap: 10px;
+        padding: 10px;
+        display: flex;
+        margin-top: 10px;
+    }
+    .thirdchild1{
+        width: 50%;
+        height: 100%;
+    }
+       .thirdchild2{
+        width: 50%;
+        height: 100%;
+    }
+    .inchild{
+        padding: 30px;
+        display: flex;
+          flex-direction: column;
+       gap: 6px;   
+    
+    }
+}

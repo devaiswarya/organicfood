@@ -1,0 +1,19 @@
+.wholeclass{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 300px;
+    padding-top: 10px;
+    background-color: rgb(240, 237, 237);
+}
+.secondclass{
+    /* border: 1px solid blue; */
+    width: 98%;
+    height: 100%;
+    margin: auto;
+}
+@media screen and (max-width: 992px) {
+    .wholeclass
+    {
+        margin-top: 0px;
+    }
+}

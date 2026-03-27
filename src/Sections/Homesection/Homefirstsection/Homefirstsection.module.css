@@ -1,0 +1,456 @@
+.whole{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(240, 237, 237);
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.firstclass{
+    /* border: 1px solid blue; */
+    width: 83%;
+    height: 700px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 20px;
+}
+.secondclass{
+    /* border: 1px solid green; */
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.oneclass{
+    /* border: 1px solid blue; */
+    height: 50%;
+}
+.one{
+    /* border: 1px solid red; */
+    height: 100%;
+    background-color: #038b25;
+    border-radius: 10px;
+    display: flex;
+}
+.onesub{
+     /* border: 1px solid;  */
+     width: 60%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 30px;
+}
+.onessub{
+    /* border: 1px solid; */
+    width: 40%;
+    margin: auto;
+}
+.f2{
+    color: #F8FF13;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--secondary-root);
+    font-style: italic;
+    letter-spacing: 1.7px;
+}
+.f3{
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: var(--secondary-root);
+    letter-spacing: 1.7px;
+    line-height: 55px;
+}
+.f4{
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--secondary-root);
+    letter-spacing: 1.7px;
+    color: white;
+    line-height: 23px;
+}
+.twoclass{
+    /* border: 1px solid blue; */
+    display: flex;   
+    height: 50%;
+    gap: 10px;
+}
+.three{
+    /* border: 1px solid; */
+    width: 50%;
+    background-color: rgb(243, 155, 170);
+     border-radius: 10px;
+    display: flex;
+}
+.three1{
+    /* border: 1px solid; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 30px;
+}
+.three2{
+    /* border: 1px solid; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.f5{
+    font-size: 35px;
+    font-family: var(--secondary-root);
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    color: white;
+}
+.four{
+    /* border: 1px solid; */
+    width: 50%;
+    background-color: rgb(87, 198, 242);
+    border-radius: 10px;
+    display: flex;
+}
+.foursub{
+    /* border: 1px solid; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+.foursub1{
+    /* border: 1px solid; */
+    width: 50%;
+}
+.foursub1 img{
+    width: 100%;
+    height: 100%;
+}
+.f6{
+    font-size: 36px;
+    font-weight: 600;
+    font-family: var(--secondary-root);
+    color: white;
+}
+.thirdclass{
+    /* border: 1px solid red; */
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.five{
+    /* border: 1px solid purple; */
+    height: 55%;
+    background-color:#FF9E22;
+    background-image:url('../../../../src//assert//pineapple.png');
+    background-repeat: no-repeat;
+     border-radius: 15px;
+     position: relative;
+}
+.fivechild{
+    /* border: 1px solid; */
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.organic{
+    font-size: 28px;
+    font-family: var(--secondary-root);
+    color: white;
+}
+.f1{
+    /* border: 1px solid ; */
+    width: 90px;
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--secondary-root);
+}
+.six{
+    /* border: 1px solid pink; */
+    height: 45%;
+    background-color: red;
+    border-radius: 10px;
+    background-image: url('../../../../src/assert/chilli.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 83% ;
+    position: relative;
+}
+.sixsub{
+    /* border: 1px solid; */
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+}
+.f7{
+    font-size: 28px;
+    font-family: var(--secondary-root);
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1.7px;
+}
+
+@media screen and (min-width:320px) and (max-width:510px){
+    .whole{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .firstclass{
+        width: 98% !important;
+        height: 1400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .secondclass{
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+    }
+    .twoclass{
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    .three{
+        width: 100%;
+        height: 50%;
+    }
+    .four{
+        width: 100%;
+        height: 50%;
+    }
+    .thirdclass{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .five{
+        width: 98%;
+    }
+    .six{
+        width: 98%;
+        height: 55%;
+    }
+    .f2{
+        font-size: 13px;
+    }
+    .f3{
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .f4{
+        font-size: 10px;
+    }
+    .oneclass{
+        height: 40%;
+    }
+    .onesub{
+        width: 50%;
+        padding: 10px;
+        padding-left: 10px;
+    }
+    .onessub{
+        width: 50%;
+        height: 100%;
+    }
+    .onessub img{
+        width: 100%;
+        height: 100%;
+    }
+    .foursub{
+        padding-left: 10px;
+    }
+    .f5{
+        font-size: 24px;
+    }
+    .f6{
+        font-size: 24px;
+    }
+    .fivechild{
+        bottom:20px;
+        left: 20px;
+    }
+    .f7{
+        font-size: 24px;
+    }
+    .sixsub{
+        padding-left: 20px;
+        bottom: 20px;
+    }
+}
+
+@media screen and (min-width:510px) and (max-width:768px){
+     .whole{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .firstclass{
+        width: 98% !important;
+        height: 1400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .secondclass{
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+    }
+    .twoclass{
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    .three{
+        width: 100%;
+        height: 50%;
+    }
+    .four{
+        width: 100%;
+        height: 50%;
+    }
+    .thirdclass{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .five{
+        width: 98%;
+        height: 50%;
+    }
+    .six{
+        width: 98%;
+        height: 50%;
+    }
+    .f2{
+        font-size: 18px;
+    }
+    .f3{
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .f4{
+        font-size: 13px;
+    }
+    .oneclass{
+        height: 40%;
+    }
+    .onesub{
+        width: 50%;
+        padding: 10px;
+        gap: 10px;
+    }
+    .onessub{
+        width: 50%;
+        height: 100%;
+    }
+    .onessub img{
+        width: 100%;
+        height: 100%;
+    }
+    .foursub{
+        padding-left: 10px;
+    }
+    .f5{
+        font-size: 24px;
+    }
+    .f6{
+        font-size: 24px;
+    }
+    .fivechild{
+        bottom:20px;
+        left: 20px;
+    }
+    .f7{
+        font-size: 24px;
+    }
+    .sixsub{
+        padding-left: 20px;
+       bottom: 20px;
+    }
+    .three1{
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:992px){
+    .whole{
+        width:100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .firstclass{
+        width: 98%;
+        gap: 10px;
+    }
+    .onessub{
+        width: 40%;
+        height: 100%;
+    }
+    .onessub img{
+        width: 100%;
+        height: 100%;
+    }
+    .fivechild{
+        left: 10px;
+    }
+    .f5{
+        font-size: 30px;
+    }
+    .three1{
+        padding-left: 10px;
+    }
+    .f6{
+     font-size: 30px;
+    }
+    .foursub{
+        padding-left: 10px;
+    }
+}
+@media screen and (min-width:993px) and (max-width:1200px){
+    .whole{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    } 
+    .firstclass{
+        width: 98%;
+        gap: 10px;
+    }
+     .onessub{
+        width: 40%;
+        height: 100%;
+    }
+    .onessub img{
+        width: 100%;
+        height: 100%;
+    }
+     .three1{
+        padding-left: 10px;
+    }
+     .foursub{
+        padding-left: 10px;
+    }
+}
+
+

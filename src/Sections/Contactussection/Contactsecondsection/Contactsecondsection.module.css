@@ -1,0 +1,254 @@
+.mainclass{
+    /* border: 1px solid red; */
+    width:100%;
+    /* height: 500px; */
+    background-color: #f0eff1;
+}
+.firstclass{
+    /* border: 1px solid blue; */
+    width: 100%;
+    /* height: 430px; */
+}
+.firstsub{
+    /* border: 1px solid; */
+    text-align: center;
+    padding: 15px;
+    color: black;
+    font-size: 20px;
+    font-family: var(--secondary-root);
+    padding-top: 30px;
+}
+.secondsub{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+.secondsub input{
+    width: 350px;
+    height: 30px;
+    outline: none;
+    padding: 5px;
+}
+.but{
+    width: 100px;
+    height: 40px;
+    background-color: #008000;
+    color: white;
+}
+.secondclass{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+.first{
+    /* border: 1px solid ; */
+    width: 220px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.firstcolor{
+    color: #008000;
+    font-size: 30px;
+}
+.p1{
+    color: #474747;
+    font-size: 14px;
+    font-family: var(--secondary-root);
+    font-weight: 700px;
+}
+.p2{
+    color:  #474747 ;
+    font-size: 13px;
+    font-family: var(--secondary-root);
+}
+.p3{
+    color: #474747;
+    font-size: 14px;
+    font-family: var(--secondary-root);
+    font-weight: 700px;
+}
+.text{
+    font-family: var(--third-root);
+    font-weight: 600;
+    outline: none;
+    padding: 5px;
+}
+.in{
+    font-family: var(--third-root);
+    font-weight: 600;
+}
+.same{
+    font-family: var(--secondary-root);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media screen and (min-width:320px) and (max-width:576px){
+    .mainclass{
+        /* height: 1200px; */
+    }
+    .firstclass{
+        /* height: 500px; */
+    }
+    .secondsub input{
+    width: 260px;
+    /* width: auto; */
+    height: 30px;
+    padding: 5px;
+   }
+   .text{
+    width: 260px;
+    height: 180px;
+    font-family: var(--third-root);
+    font-weight: 600;
+    padding: 5px;
+   }
+   .but{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+   }
+   .secondclass{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    padding-top: 30px;
+   }
+   .first{
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+   }
+   .firstcolor{
+    font-size: 35px;
+   }
+   .p1{
+    text-align: center;
+    font-size: 12px;
+   }
+   .p2{
+    text-align: center;
+    font-size: 12px;
+   }
+   .p3{
+    text-align: center;
+    font-size: 12px;
+   }
+   .firstsub{
+    font-size: 15px;
+   }
+   .same{
+    font-size: 14px;
+   }
+}
+@media screen and (min-width:577px) and (max-width:768px){
+    .mainclass{
+        /* height: 1200px; */
+    }
+    .firstclass{
+        /* height: 500px; */
+    }
+    .secondclass{
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-top: 20px;
+    }
+    .first{
+        width: 300px;
+        /* height: 150px; */
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .firstcolor{
+        font-size: 40px;
+    }
+    .p1{
+        font-size:16px
+    }
+    .p3{
+        font-size:16px
+    }
+    .text{
+    width: 350px;
+    height: 180px;
+    font-family: var(--third-root);
+    font-weight: 600;
+    padding: 5px;
+   }
+}
+@media screen and (min-width:768px) and (max-width:980px){
+    .mainclass{
+        /* height: 610px; */
+    }
+    .firstclass{
+        /* height: 510px; */
+    }
+    .firstsub{
+        padding: 35px;
+    }
+    .secondclass{
+        height: 100px;
+    }
+    .secondsub{
+        /* gap: 25px; */
+    }
+    .text{
+        width: 350px;
+    }
+    .but{
+        width: 170px;
+        height: 50px;
+    }
+    .first{
+        width: 160px;
+    }
+    .firstcolor{
+        font-size: 40px;
+    }
+    .p3{
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width:981px) and (max-width: 1200px){
+    .mainclass{
+        /* height: 600px; */
+    }
+    .firstclass{
+        /* height: 500px; */
+    }
+    .firstsub{
+        padding: 35px;
+    }
+    .secondsub input{
+        width: 400px;
+        padding: 5px;
+    }
+    .text{
+        width: 400px;
+        font-family: var(--third-root);
+    font-weight: 600;
+    padding: 5px;
+    }
+    .but{
+        width: 150px;
+        height: 50px;
+    }
+    .secondclass{
+        height: 100px;
+    }
+}

@@ -1,0 +1,148 @@
+.wholeclass{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-top: 19px;
+    background-color: rgb(240, 237, 237);
+    margin-top: 8px;
+    /* margin-bottom: 100px; */
+}
+.firstclass{
+    /* border: 1px solid blue; */
+    width: 82%;
+    /* height: 400px; */
+    margin:auto;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 50px;
+    background-color: white;
+}
+.firstsubclass{
+    /* border:3px solid; */
+    width: 48%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.secondsubclass{
+    /* border: 1px solid red; */
+    width: 48%;
+}
+.secondsubclass img {
+    width: 100%;
+    height: 100%;
+}
+.p1{
+    font-size: 35px;
+    font-family: var(--secondary-root);
+    font-weight: 600;
+    line-height: 45px;
+    letter-spacing: 1.7px;
+    color: black;
+}
+.p2{
+    font-size: 14px;
+    font-family: var(--secondary-root);
+    color: #A0A0A0;
+     letter-spacing: 1.7px;
+     line-height: 26px;
+}
+
+@media screen and (min-width:320px) and (max-width:370px){
+    .firstclass{
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .firstsubclass{
+        width: 100%;
+        /* height: 450px; */
+        padding: 10px;
+    }
+    .secondsubclass{
+        width: 100%;
+        /* height: 220px; */
+    }
+    .secondsubclass img{
+        width: 100%;
+        height: 100%;
+    }
+    .p1{
+        font-size: 25px;
+        font-family: var(--secondary-root);
+    }
+    .p2{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 1.7px;
+    }
+}
+
+@media screen and (min-width:370px) and (max-width:765px){
+    .firstclass{
+        width: 92%;
+        /* height: 653px; */
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .firstsubclass{
+        width: 100%;
+        /* height: 600px; */
+        padding: 15px;
+        gap: 10px;
+    }
+    .secondsubclass{
+        width: 100%;
+        height: 300px;
+    }
+    .secondsubclass img{
+        width: 100%;
+        height: 100%;
+    }.p1{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1.7;
+    }
+    .p2{
+        font-size: 13px;
+        font-family: var(--secondary-root);
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 1.7px;
+    }
+}
+@media screen and (min-width:766px) and (max-width:992px){
+    .firstclass{
+        display: flex;
+        width: 95%;
+        gap: 0;
+    }
+    .firstsubclass{
+        width: 53%;
+        padding: 20px;
+
+    }
+    .p1{
+        font-size: 25px;
+        font-family: var(--secondary-root);
+        font-weight: 600;
+        letter-spacing: 1.7;
+    }
+    .p2{
+        font-size: 13px;
+        font-family: var(--secondary-root);
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 1.7px;
+    }
+    .secondsubclass{
+        width: 47%;
+    }
+    .secondsubclass img {
+        width: 100%;
+        height: 100%;
+    }
+}

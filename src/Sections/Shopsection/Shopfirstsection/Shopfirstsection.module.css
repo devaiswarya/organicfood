@@ -1,0 +1,100 @@
+.wholeclass{
+    /* border: 1px solid red; */
+    margin-top: 20px;
+}
+.mainclass{
+    /* border: 1px solid blue; */
+    width: 82%;
+    margin: auto;
+}
+.d1{
+    font-size: 32px;
+    font-family: var(--secondary-root);
+    color: #111;
+}
+.d2{
+    font-size: 15px;
+    font-family: var(--secondary-root);
+    font-weight: 400;
+    color: #767676;
+}
+.secondaryclass{
+    /* border: 1px solid blue; */
+    width: 82%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.d3{
+    font-size: 16px;
+    font-family: var(--secondary-root);
+    font-weight: 400;
+}
+.d4{
+    font-size: 16px;
+    font-family: var(--secondary-root);
+    color: #666;
+}
+.miniclass{
+    /* border: 1px solid brown; */
+    display: flex;
+    gap: 10px;
+}
+
+
+
+@media screen and (min-width:320px) and (max-width:576px){
+    .mainclass{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .d1{
+        font-size: 18px;
+    }
+    d2{
+        font-size: 15px;
+    }
+    .secondaryclass{
+        width: 95%;
+        gap: 10px;
+    }
+    .miniclass{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .wholeclass{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:992px){
+    .mainclass{
+        width: 96%;
+    }
+    .d1{
+        font-size: 32px;
+    }
+    .d2{
+        font-size: 15px;
+    }
+    .secondaryclass{
+        width: 96%;
+    }
+      .wholeclass{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){
+    .mainclass{
+        width: 98%;
+    }
+    .secondaryclass{
+        width: 98%;
+    }
+}
