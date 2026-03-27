@@ -6,7 +6,7 @@ const Cart = ({ cartOpen, setCartOpen }) => {
 
       const { cartItems, removeFromCart, addToCart,decreaseQuantity } = useContext(CartContext);
 
-  // Calculate total
+  
   const totalAmount = cartItems.reduce((sum, item) => {
     const price = parseFloat(
       (item.offerprice || item.fixedprice || item.originalprice || "0").replace('$', '')

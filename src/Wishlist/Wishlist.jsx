@@ -9,7 +9,7 @@ const Wishlist = () => {
 
     const {addToCart} = useContext(CartContext);
 
-    // if(wishlistItems.length === 0) return <p></p>;
+    
 
   return (
     <div className={alter.wholeclass}>
