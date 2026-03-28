@@ -3,7 +3,7 @@ import high from './Homefirstsection.module.css'
 import icon from '../../../../src/assert/wholeveg.png'
 import icon1 from '../../../../src/assert/result13.png'
 import icon2 from '../../../../src/assert/corns.png'
-import icon3 from '../../../../src/assert/chilli.png'
+// import icon3 from '../../../../src/assert/chilli.png'
 
 const Homefirstsection = () => {
   return (

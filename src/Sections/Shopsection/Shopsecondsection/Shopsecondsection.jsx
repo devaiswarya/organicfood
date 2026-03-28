@@ -33,7 +33,7 @@ import bread from '../../../../src/assert/bread.png'
 import mintjuice from '../../../../src/assert/result13.png'
 import bottlejuice from '../../../../src/assert/bottlejuice.png'
 import { CartContext } from '../../../Cart/CartContext'
-import Data from '../../../Data/Data'
+// import Data from '../../../Data/Data'
 import { WishlistContext } from '../../../Wishlist/WishlistContext'
 
 const Shopsecondsection = () => {

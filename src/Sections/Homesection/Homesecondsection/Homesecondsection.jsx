@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
 import king from './Homesecondsection.module.css'
 import cheerirs from '../../../assert/result8.png'
@@ -13,7 +13,7 @@ import spices from '../../../../src/assert/result4.png'
 import peas from '../../../../src/assert/result3.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Navigation, Pagination} from 'swiper/modules';
+import { Navigation} from 'swiper/modules';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import CartContext from '../../../Cart/CartContext'

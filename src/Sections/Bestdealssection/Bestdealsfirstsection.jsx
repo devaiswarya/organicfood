@@ -1,4 +1,4 @@
-import React, { use, useContext } from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import change from './Bestdealsfirstsection.module.css'
 import icon from '../../assert/result1.png'
@@ -15,7 +15,7 @@ import icon10 from '../../assert/result11.png'
 import icon11 from '../../assert/result12.png'
 import icon12 from '../../assert/result13.png'
 import { CartContext } from '../../Cart/CartContext'
-import Data from '../../../src/Data/Data'
+// import Data from '../../../src/Data/Data'
 import { WishlistContext } from '../../Wishlist/WishlistContext'
 
 const Bestdealsfirstsection = ({product}) => {
@@ -187,7 +187,7 @@ const navigate = useNavigate();
             {results.map((items)=>(
                 <div className={change.result1} key={items._id}>
                     <div className={change.imagediv} onClick={() => navigate(`/product/${items._id}`)}>
-                        <img src={items.image} alt="here the result 1  image" />
+                        <img src={items.image} alt="" />
                     </div>
                     <div className={change.content}>
                         <p className={change.f5}>{items.sub}</p>

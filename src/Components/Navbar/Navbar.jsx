@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className={styles.secondclass}>
             <div className={styles.secondchild}>
             <div className={styles.one}>
-                <img src={icon} alt="image here" />
+                <img src={icon} alt="" />
             </div>
             <div className={styles.two}>
                 <input type="text" placeholder='Search'/>
