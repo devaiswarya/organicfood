@@ -358,7 +358,9 @@ const Shopsecondsection = () => {
       const navigate = useNavigate();
 
       const [currentpage,setcurrentpage] = useState(1)
-      const [postperpage,setpostperpage] = useState(12)
+      // const [postperpage,setpostperpage] = useState(12)
+
+      const [postperpage] = useState(12)
       
       const indexoflastpage = currentpage * postperpage
 
