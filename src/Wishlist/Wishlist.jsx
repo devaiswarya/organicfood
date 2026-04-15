@@ -2,8 +2,11 @@ import React, { useContext } from 'react'
 import {WishlistContext} from './WishlistContext'
 import alter from './Wishlist.module.css'
 import {CartContext} from '../Cart/CartContext'
+import { useNavigate } from 'react-router-dom'
 
 const Wishlist = () => {
+
+  const navigate = useNavigate();
 
     const {wishlistItems,removeFromWishlist } = useContext(WishlistContext);
 
@@ -25,7 +28,7 @@ const Wishlist = () => {
            <div className={alter.thirdclass}>
         {wishlistItems.map((item)=>(
             <div key={item.id} className={alter.one}>
-              <div className={alter.two}>
+              <div className={alter.two} onClick={() => navigate(`/product/${item._id}`)}>
                 <img src={item.image} alt="" />
                 </div>
                 <div className={alter.three}>

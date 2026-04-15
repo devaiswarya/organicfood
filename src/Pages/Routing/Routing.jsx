@@ -14,6 +14,7 @@ import ProductList from '../../Product/Productlist'
 import Loginform from '../../Loginform/Loginform'
 import { WishlistProvider } from '../../Wishlist/WishlistContext'
 import Wishlist from '../../Wishlist/Wishlist'
+import Checkoutpage from '../../Checkoutpage/Checkoutpage'
 
 const Routing = () => {
   return (
@@ -32,6 +33,7 @@ const Routing = () => {
             <Route path='/Productlis' element={<ProductList/>} />
             <Route path='/form' element={<Loginform/>} />
             <Route path='/wishlist' element={<Wishlist/>} />
+            <Route path='/Checkoutpage' element={<Checkoutpage/>} />
           </Routes>
         <Footer/>
         </CartProvider>

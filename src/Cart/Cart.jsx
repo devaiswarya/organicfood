@@ -1,18 +1,26 @@
 import React, { useContext } from 'react'
 import {CartContext} from './CartContext'
 import cart from './Cart.module.css'
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({ cartOpen, setCartOpen }) => {
 
+
+  const navigate = useNavigate();
+
       const { cartItems, removeFromCart, addToCart,decreaseQuantity } = useContext(CartContext);
 
-  
   const totalAmount = cartItems.reduce((sum, item) => {
     const price = parseFloat(
       (item.offerprice || item.fixedprice || item.originalprice || "0").replace('$', '')
     );
     return sum + price * item.quantity;
   }, 0);
+
+  const handlecheckout  = () => {
+    setCartOpen(false);
+    navigate("/Checkoutpage");
+  }
 
   return (
     <div className={`${cart.drawer} ${cartOpen ? cart.open : ''}`}>
@@ -56,6 +64,10 @@ const Cart = ({ cartOpen, setCartOpen }) => {
       </div>
         
           </div>
+          {cartItems.length > 0 ?   (<div className={cart.footer} onClick={handlecheckout}>
+            <p className={cart.out}>Checkout</p>
+          </div>): ("")}
+         
  </div>
 
 )};
