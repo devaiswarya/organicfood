@@ -6,7 +6,7 @@ import { CartContext } from '../../../Cart/CartContext'
 import { WishlistContext } from '../../../Wishlist/WishlistContext'
 
 const Shopfirstsection = () => {
-  
+
   const [data, setdata] = useState([]) // used to fetch the product from the API
   const [datas, setdatas] = useState([])  //used to fetch the category name from the API
 
@@ -25,52 +25,53 @@ const Shopfirstsection = () => {
   const { addToWishlist } = useContext(WishlistContext)
 
   // FETCH PRODUCTS
-  const getdata = async () => {
+  // const getdata = async () => {
 
-    const offset = currentpage - 1
+  //   const offset = currentpage - 1
 
-    const res = await axios.get(
-      `http://127.0.0.1:8000/api/products/fetched?cat_id=${search}&sort=${sort}&limit=${limit}&offset=${offset}`
-    )
-
-    setdata(res.data.data)
-
-    // backend should return total count
-    settotalpage(Math.ceil(res.data.total / limit))
-
-    console.log(res.data)
-  }
-
- useEffect(() => {
-
-  const getdata = async () => {
-
-    const offset = currentpage - 1
-
-    const res = await axios.get(
-      `http://127.0.0.1:8000/api/products/fetched?cat_id=${search}&sort=${sort}&limit=${limit}&offset=${offset}`
-    )
-
-    setdata(res.data.data)
-
-    settotalpage(Math.ceil(res.data.total / limit))
-  }
-
-  getdata()
-
-}, [search, sort, currentpage])
-  // FETCH CATEGORIES
-  // const getdatas = async () => {
   //   const res = await axios.get(
-  //     `http://127.0.0.1:8000/api/categories/fetched`
+  //     `http://127.0.0.1:8000/api/products/fetched?cat_id=${search}&sort=${sort}&limit=${limit}&offset=${offset}`
   //   )
 
-  //   setdatas(res.data.data)
+  //   setdata(res.data.data)
+
+  //   // backend should return total count
+  //   settotalpage(Math.ceil(res.data.total / limit))
 
   //   console.log(res.data)
   // }
 
   useEffect(() => {
+
+    const getdata = async () => {
+
+      const offset = currentpage - 1
+
+      const res = await axios.get(
+        `http://127.0.0.1:8000/api/products/fetched?cat_id=${search}&sort=${sort}&limit=${limit}&offset=${offset}`
+      )
+
+      setdata(res.data.data)
+
+      settotalpage(Math.ceil(res.data.total / limit))
+    }
+
+    getdata()
+
+  }, [search, sort, currentpage])
+  // FETCH CATEGORIES
+
+
+  useEffect(() => {
+    const getdatas = async () => {
+      const res = await axios.get(
+        `http://127.0.0.1:8000/api/categories/fetched`
+      )
+
+      setdatas(res.data.data)
+
+      console.log(res.data)
+    }
     getdatas()
   }, [])
 
@@ -171,7 +172,7 @@ const Shopfirstsection = () => {
                 </p>
 
               </div>
-{/* 
+              {/* 
               {items.high ? (
                 <p className={cycle.sale}>
                   {items.high}
@@ -183,7 +184,7 @@ const Shopfirstsection = () => {
                 onClick={() => addToWishlist(items)}
               >
                 <p className={cycle.win}>
-                     <i class="fa-regular fa-heart"></i>
+                  <i class="fa-regular fa-heart"></i>
                 </p>
               </div>
 
