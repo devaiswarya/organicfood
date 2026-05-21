@@ -46,7 +46,7 @@ const Loginform = () => {
             password:pass
         } 
         try{
-            const res=await axios.post(`http://127.0.0.1:8000/api/user/loginuser`,newData)
+            const res=await axios.post(`https://backend-apqk.onrender.com/api/user/loginuser`,newData)
             console.log(res.data)
             alert(res.data.message)
         } 

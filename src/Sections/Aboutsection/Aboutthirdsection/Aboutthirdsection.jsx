@@ -122,7 +122,7 @@ const [container,setcontainer] = useState([])
 
 const getdata = async() =>{
   try{
-    const res = await axios.get(`http://127.0.0.1:8000/api/products/fetched?cat_id=4`)
+    const res = await axios.get(`https://backend-apqk.onrender.com/api/products/fetched?cat_id=4`)
     setdata(res.data.data)
     console.log(res.data)
   }
@@ -133,7 +133,7 @@ const getdata = async() =>{
 
 const get = async() => {
   try{
-    const res = await axios.get(`http://127.0.0.1:8000/api/products/fetched?cat_id=5`)
+    const res = await axios.get(`https://backend-apqk.onrender.com/api/products/fetched?cat_id=5`)
     setfruit(res.data.data)
     console.log(res.data)
   }
@@ -144,7 +144,7 @@ const get = async() => {
 
 const getdatas = async() => {
   try{
-    const res = await axios.get('http://127.0.0.1:8000/api/products/fetched?cat_id=1')
+    const res = await axios.get('https://backend-apqk.onrender.com/api/products/fetched?cat_id=1')
     setcontainer(res.data.data)
     console.log(res.data)
   }

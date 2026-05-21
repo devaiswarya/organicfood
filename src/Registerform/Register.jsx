@@ -72,7 +72,7 @@ const Register = () => {
             confirm:confirm
         }
         try{
-            const res = await axios.post(`http://127.0.0.1:8000/api/user/created`,newData)
+            const res = await axios.post(`https://backend-apqk.onrender.com/api/user/created`,newData)
             console.log(res.data)
         }
         catch(err){

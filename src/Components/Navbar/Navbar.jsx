@@ -29,7 +29,7 @@ const Navbar = () => {
    
     const showdata = async(id) => {
         try{
-            const res=await axios.get(`http://127.0.0.1:8000/api/products/retrieve/${id}`)
+            const res=await axios.get(`https://backend-apqk.onrender.com/api/products/retrieve/${id}`)
             console.log(id)
             console.log(res.data)
             setfind('')
@@ -43,7 +43,7 @@ const Navbar = () => {
     useEffect(() => {
          const getdata = async () => {
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/products/fetched?find=${find}`)
+            const res = await axios.get(`https://backend-apqk.onrender.com/api/products/fetched?find=${find}`)
             setname(res.data.data)
             console.log(res.data)
         }

@@ -37,6 +37,7 @@
     height: 40px;
     background-color: #008000;
     color: white;
+    cursor: pointer;
 }
 .secondclass{
     /* border: 1px solid; */

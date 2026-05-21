@@ -36,6 +36,7 @@
     font-size: 16px;
     font-family: var(--secondary-root);
     color: #666;
+    cursor: pointer;
 }
 .miniclass{
     /* border: 1px solid brown; */
@@ -112,6 +113,7 @@
     align-items: center;
     color: white;
     background-color:  #008000;
+    cursor: pointer;
 }
 .buttons:hover{
     background-color: #093f09;
@@ -160,6 +162,7 @@
     justify-content: center;
     border-radius: 5px;
     background-color: #d3d9de;
+    cursor: pointer;
 }
 .active{
     background-color: #008000;
@@ -187,6 +190,7 @@
     justify-content: center;
     background-color: #d5d2d2;
     display: none;
+    cursor: pointer;
 }
 .firstchild:hover .win{
     display: block;

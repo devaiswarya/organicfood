@@ -120,7 +120,7 @@ const [data,setdata] = useState([])
 
 const getdata = async() => {
   try{
-    const res = await axios.get(`http://127.0.0.1:8000/api/products/fetched?cat_id=1`)
+    const res = await axios.get(`https://backend-apqk.onrender.com/api/products/fetched?cat_id=1`)
     setdata(res.data.data)
     console.log(res.data)
   }

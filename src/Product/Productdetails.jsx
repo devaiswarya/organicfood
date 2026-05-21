@@ -18,7 +18,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const getdata = async () => {
       try {
-        const res = await axios.get(`http://127.0.0.1:8000/api/products/retrieve/${id}`)
+        const res = await axios.get(`https://backend-apqk.onrender.com/api/products/retrieve/${id}`)
         setdata(res.data.data)
         console.log(res.data)
       }

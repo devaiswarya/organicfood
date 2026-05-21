@@ -100,6 +100,7 @@
     font-size: 13px;
     font-family: var(--secondary-root);
     font-weight: 400;
+    cursor: pointer;
 }
 .thirdchilds{
     /* border: 1px solid ; */

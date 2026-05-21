@@ -48,7 +48,7 @@ const Shopfirstsection = () => {
       const offset = currentpage - 1
 
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/products/fetched?cat_id=${search}&sort=${sort}&limit=${limit}&offset=${offset}`
+        `https://backend-apqk.onrender.com/api/products/fetched?cat_id=${search}&sort=${sort}&limit=${limit}&offset=${offset}`
       )
 
       setdata(res.data.data)
@@ -65,7 +65,7 @@ const Shopfirstsection = () => {
   useEffect(() => {
     const getdatas = async () => {
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/categories/fetched`
+        `https://backend-apqk.onrender.com/api/categories/fetched`
       )
 
       setdatas(res.data.data)
