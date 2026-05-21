@@ -41,20 +41,34 @@ const Shopfirstsection = () => {
     console.log(res.data)
   }
 
-  useEffect(() => {
-    getdata()
-  }, [search, sort, currentpage])
+ useEffect(() => {
 
-  // FETCH CATEGORIES
-  const getdatas = async () => {
+  const getdata = async () => {
+
+    const offset = currentpage - 1
+
     const res = await axios.get(
-      `http://127.0.0.1:8000/api/categories/fetched`
+      `http://127.0.0.1:8000/api/products/fetched?cat_id=${search}&sort=${sort}&limit=${limit}&offset=${offset}`
     )
 
-    setdatas(res.data.data)
+    setdata(res.data.data)
 
-    console.log(res.data)
+    settotalpage(Math.ceil(res.data.total / limit))
   }
+
+  getdata()
+
+}, [search, sort, currentpage])
+  // FETCH CATEGORIES
+  // const getdatas = async () => {
+  //   const res = await axios.get(
+  //     `http://127.0.0.1:8000/api/categories/fetched`
+  //   )
+
+  //   setdatas(res.data.data)
+
+  //   console.log(res.data)
+  // }
 
   useEffect(() => {
     getdatas()
