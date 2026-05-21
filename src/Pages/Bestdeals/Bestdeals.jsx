@@ -4,7 +4,7 @@ import Bestdealsfirstsection from '../../Sections/Bestdealssection/Bestdealsfirs
 const Bestdeals = () => {
   return (
     <div>
-      <Bestdealsfirstsection/>
+      {/* <Bestdealsfirstsection/> */}
     </div>
   )
 }

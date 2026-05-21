@@ -3,6 +3,7 @@ import sky from './Homethirdsection.module.css'
 import spices from '../../../../src/assert/result4.png'
 import bun from '../../../../src/assert/result5.png'
 import lemon from '../../../../src/assert/lemonjuices.png'
+import { Link } from 'react-router-dom'
 
 function Homethirdsection() {
   return (
@@ -19,7 +20,7 @@ function Homethirdsection() {
                     <div className={sky.in1first}>
                         <p className={sky.s1}>FARM FRESH</p>
                         <p className={sky.s2}>Daliy Uses</p>
-                         <p className={sky.s3}>check now</p>
+                          <Link to={'/shop'}><p className={sky.s3}>check now</p></Link>
                     </div>
                 </div>
                 <div className={sky.second}>
@@ -29,7 +30,7 @@ function Homethirdsection() {
                     <div className={sky.in1first}>
                         <p className={sky.s1}>100% ORGANIC</p>
                         <p className={sky.s2}>Fresh Breads</p>
-                        <p className={sky.s3}>check now</p>
+                        <Link to={'/shop'}><p className={sky.s3}>check now</p></Link>
                     </div>
                 </div>
                 <div className={sky.third}>
@@ -39,7 +40,7 @@ function Homethirdsection() {
                     <div className={sky.in1first}>
                         <p className={sky.s1}>100% ORGANIC</p>
                         <p className={sky.s2}>HEALTHY JUICES</p>
-                        <p className={sky.s3}>check now</p>
+                        <Link to={'/shop'}><p className={sky.s3}>check now</p></Link>
                     </div>
                 </div>
             </div>

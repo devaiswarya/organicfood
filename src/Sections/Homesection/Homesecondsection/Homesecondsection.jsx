@@ -1,4 +1,4 @@
-import React, { useContext} from 'react'
+import React, { useContext, useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import king from './Homesecondsection.module.css'
 import cheerirs from '../../../assert/result8.png'
@@ -18,102 +18,120 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import CartContext from '../../../Cart/CartContext'
 import { WishlistContext } from '../../../Wishlist/WishlistContext'
+import axios from 'axios'
 
 const Homesecondsection = () => {
 
   
-  const connect=[
-    {
-    _id:119,
-    image:[cheerirs],
-    name:'omnis iste natus',
-    fixedprice:'$40.00 - $300.00',
-    card:'select options',
-    high:'-$40.00',
-    symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:133,
-    image:[juice],
-    name:'Ut perspiciatis',
-    fixedprice:'$400.00',
-    card:'Add to cart',
-    symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:128,
-    image:[onion],
-    name:'Quasi architectto',
-    fixedprice:'$88.00 - $99.00',
-    card:'select options',
-      symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:132,
-    image:[poma],
-    name:'Sunt explicabo',
-    fixedprice:'$49.00 - $199.00',
-    card:'select options',
-    high:'-$49.00',
-      symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:101,
-    image:[egg],
-    name:'Accusantium',
-    Originalprice:'%50.00',
-    offerprice:'$45.00',
-    card:'Add to cart',
-    high:'-$5.00',
-      symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:114,
-    image:[bottlejuice],
-    name:'Nemo enim',
-    fixedprice:'$30.00',
-    card:'Add to cart',
-      symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:103,
-    image:[orange],
-    name:'assumenda est,omnis',
-    originalprice:'$70.00',
-    offerprice:'$65.00',
-    card:'Add to cart',
-    high:'-$5.00',
-      symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:131,
-    image:[sugar],
-    name:'Salt & Sugar',
-    originalprice:'$60.00',
-    offerprice:'$52.00',
-    card:'Add to cart',
-    high:'-$8.00',
-      symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:109,
-    image:[spices],
-    name:'et iusto odio',
-    originalprice:'$55.00',
-    offerprice:'$52.00',
-    card:'Add to cart',
-    high:'-$3.00',
-      symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:106,
-    image:[peas],
-    name:'distinctio',
-    fixedprice:'$99.00 - $499.00',
-    card:'select options',
-      symbol2:<i class="fa-regular fa-heart"></i>
+//   const connect=[
+//     {
+//     _id:119,
+//     image:[cheerirs],
+//     name:'omnis iste natus',
+//     fixedprice:'$40.00 - $300.00',
+//     card:'select options',
+//     high:'-$40.00',
+//     symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:133,
+//     image:[juice],
+//     name:'Ut perspiciatis',
+//     fixedprice:'$400.00',
+//     card:'Add to cart',
+//     symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:128,
+//     image:[onion],
+//     name:'Quasi architectto',
+//     fixedprice:'$88.00 - $99.00',
+//     card:'select options',
+//       symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:132,
+//     image:[poma],
+//     name:'Sunt explicabo',
+//     fixedprice:'$49.00 - $199.00',
+//     card:'select options',
+//     high:'-$49.00',
+//       symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:101,
+//     image:[egg],
+//     name:'Accusantium',
+//     Originalprice:'%50.00',
+//     offerprice:'$45.00',
+//     card:'Add to cart',
+//     high:'-$5.00',
+//       symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:114,
+//     image:[bottlejuice],
+//     name:'Nemo enim',
+//     fixedprice:'$30.00',
+//     card:'Add to cart',
+//       symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:103,
+//     image:[orange],
+//     name:'assumenda est,omnis',
+//     originalprice:'$70.00',
+//     offerprice:'$65.00',
+//     card:'Add to cart',
+//     high:'-$5.00',
+//       symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:131,
+//     image:[sugar],
+//     name:'Salt & Sugar',
+//     originalprice:'$60.00',
+//     offerprice:'$52.00',
+//     card:'Add to cart',
+//     high:'-$8.00',
+//       symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:109,
+//     image:[spices],
+//     name:'et iusto odio',
+//     originalprice:'$55.00',
+//     offerprice:'$52.00',
+//     card:'Add to cart',
+//     high:'-$3.00',
+//       symbol2:<i class="fa-regular fa-heart"></i>
+//   },
+//   {
+//     _id:106,
+//     image:[peas],
+//     name:'distinctio',
+//     fixedprice:'$99.00 - $499.00',
+//     card:'select options',
+//       symbol2:<i class="fa-regular fa-heart"></i>
+//   }
+// ]
+
+const [data,setdata] = useState([])
+
+const getdata = async() => {
+  try{
+    const res = await axios.get(`http://127.0.0.1:8000/api/products/fetched?cat_id=1`)
+    setdata(res.data.data)
+    console.log(res.data)
   }
-]
+  catch(err){
+    console.log(err)
+  }
+}
+
+useEffect(()=>{
+  getdata();
+},[])
 
 const {addToCart} = useContext(CartContext);
 
@@ -138,7 +156,7 @@ const navigate = useNavigate();
         992: {slidesPerView: 5}
        }}
       navigation>
-      {connect.map((items,index)=>(
+      {/* {data.map((items,index)=>(
     <SwiperSlide key={index}>
         <div className={king.inchild} key={index}>
        
@@ -159,6 +177,29 @@ const navigate = useNavigate();
           </div>
            <div className={king.symbol} onClick={() => addToWishlist(items)}>
               <p className={king.win}>{items.symbol2}</p>
+            </div>
+          </div>
+    </SwiperSlide>   
+      ))} */}
+
+
+      {data.map((items,index)=>(
+    <SwiperSlide key={index}>
+        <div className={king.inchild}>
+          <div className={king.imagediv} onClick={() => navigate(`/product/${items.id}`)}>
+            <img src={items.image} alt="" />
+          </div>
+         <div className={king.details}>
+          <p className={king.f2}>{items.product_name}</p>
+          <div className={king.sample}>
+            <del className={king.delete}>{items.product_price}</del>
+           <p className={king.f3}>{items.product_offer}</p>
+          </div> 
+          <p className={king.sale} onClick={() => addToCart(items)}>Add to Cart</p>
+              <p className={king.high}>${items.product_offer-items.product_price}.00</p>
+          </div>
+           <div className={king.symbol} onClick={() => addToWishlist(items)}>
+              <p className={king.win}><i class="fa-regular fa-heart"></i></p>
             </div>
           </div>
     </SwiperSlide>   

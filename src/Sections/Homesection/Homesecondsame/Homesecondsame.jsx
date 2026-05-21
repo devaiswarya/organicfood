@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import bin from './Homesecondsame.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,62 +14,81 @@ import mango from '../../../../src/assert/mango.png'
 import bathandwash from '../../../../src/assert/bathandhandwash.png'
 import CartContext from '../../../Cart/CartContext';
 import { WishlistContext } from '../../../Wishlist/WishlistContext';
+import axios from 'axios';
 
 const Homesecondsame = () => {
 
-    const item=[
-    {
-    _id:119,
-    image:[bottlejuices],
-    name:'omnis iste natus',
-    fixedprice:'$400.00',
-    card:'select options',
-    symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:133,
-    image:[spices],
-    name:'Ut perspiciatis',
-    originalprice:'$55.00',
-    offerprice:'$52.00',
-    card:'Add to cart',
-    high:'-$3.00',
-    symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:133,
-    image:[juices],
-    name:'Ut perspiciatis',
-    fixedprice:'$150.00',
-    card:'Add to cart',
-    symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:116,
-    image:[orange],
-    name:'Ut perspiciatis',
-    fixedprice:'$60.00',
-    card:'Add to cart',
-    symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:117,
-    image:[mango],
-    name:'Ut perspiciatis',
-    originalprice:'$40.00',
-    offerprice:'$35.00',
-    card:'Add to cart',
-    high:'-$3.00',
-    symbol2:<i class="fa-regular fa-heart"></i>
-  },
-  {
-    _id:104,
-    image:[bathandwash],
-    name:'Ut perspiciatis',
-    fixedprice:'$45.00',
-    card:'Add to cart',
-    symbol2:<i class="fa-regular fa-heart"></i>
-  }]
+  //   const item=[
+  //   {
+  //   _id:119,
+  //   image:[bottlejuices],
+  //   name:'omnis iste natus',
+  //   fixedprice:'$400.00',
+  //   card:'select options',
+  //   symbol2:<i class="fa-regular fa-heart"></i>
+  // },
+  // {
+  //   _id:133,
+  //   image:[spices],
+  //   name:'Ut perspiciatis',
+  //   originalprice:'$55.00',
+  //   offerprice:'$52.00',
+  //   card:'Add to cart',
+  //   high:'-$3.00',
+  //   symbol2:<i class="fa-regular fa-heart"></i>
+  // },
+  // {
+  //   _id:133,
+  //   image:[juices],
+  //   name:'Ut perspiciatis',
+  //   fixedprice:'$150.00',
+  //   card:'Add to cart',
+  //   symbol2:<i class="fa-regular fa-heart"></i>
+  // },
+  // {
+  //   _id:116,
+  //   image:[orange],
+  //   name:'Ut perspiciatis',
+  //   fixedprice:'$60.00',
+  //   card:'Add to cart',
+  //   symbol2:<i class="fa-regular fa-heart"></i>
+  // },
+  // {
+  //   _id:117,
+  //   image:[mango],
+  //   name:'Ut perspiciatis',
+  //   originalprice:'$40.00',
+  //   offerprice:'$35.00',
+  //   card:'Add to cart',
+  //   high:'-$3.00',
+  //   symbol2:<i class="fa-regular fa-heart"></i>
+  // },
+  // {
+  //   _id:104,
+  //   image:[bathandwash],
+  //   name:'Ut perspiciatis',
+  //   fixedprice:'$45.00',
+  //   card:'Add to cart',
+  //   symbol2:<i class="fa-regular fa-heart"></i>
+  // }]
+
+  const [data,setdata] = useState([])
+
+
+  const getdata = async() => {
+    try{
+      const res= await axios.get(`http://127.0.0.1:8000/api/products/fetched`)
+      setdata(res.data.data)
+      console.log(res.data)
+    }
+    catch(err){
+      console.log(err)
+    }
+  }
+
+  useEffect(()=>{
+    getdata();
+  },[])
 
   const {addToCart} = useContext(CartContext);
 
@@ -93,7 +112,7 @@ const Homesecondsame = () => {
         992: {slidesPerView: 5}
        }}
       navigation>
-      {item.map((items,index)=>(
+      {/* {item.map((items,index)=>(
     <SwiperSlide key={index}>
         <div className={bin.inchild} key={index}>
        
@@ -117,7 +136,34 @@ const Homesecondsame = () => {
             </div>
           </div>
     </SwiperSlide>   
+      ))} */}
+
+      {data
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 7).map((items,index)=>(
+    <SwiperSlide key={index}>
+        <div className={bin.inchild}>
+          <div className={bin.imagediv} onClick={() => navigate(`/product/${items.id}`)}>
+            <img src={items.image} alt="" />
+          </div>
+         <div className={bin.details}>
+          <p className={bin.f2}>{items.product_name}</p>
+          <div className={bin.sample}>
+            <del className={bin.delete}>{items.product_price}</del>
+           <p className={bin.f3}>{items.product_offer}</p>
+          </div> 
+          <p className={bin.sale} onClick={() => addToCart(items)}>Add to Cart</p>
+              <p className={bin.high}>${items.product_offer-items.product_price}.00</p>
+          </div>
+           <div className={bin.symbol} onClick={() => addToWishlist(items)}>
+              <p className={bin.win}><i class="fa-regular fa-heart"></i></p>
+            </div>
+          </div>
+    </SwiperSlide>   
       ))}
+
+
+
       </Swiper>
       </div>
 
@@ -125,5 +171,5 @@ const Homesecondsame = () => {
         </div>
   )
 }
-
+ 
 export default Homesecondsame

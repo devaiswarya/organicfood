@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import form from './Loginform.module.css'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import Register from '../Registerform/Register'
 const Loginform = () => {
 
     const [name,setname] = useState('')
@@ -32,12 +35,24 @@ const Loginform = () => {
     }
 
     const handlesubmit = async() => {
-        if(validate()){
-            setmessage("login successfully")
-            console.log("login successfully")
-        }
-        else{
+        if(!validate()){
             setmessage('')
+
+        }
+        setmessage("login successfully")
+        console.log("login successfully")
+        const newData = {
+            email:name,
+            password:pass
+        } 
+        try{
+            const res=await axios.post(`http://127.0.0.1:8000/api/user/loginuser`,newData)
+            console.log(res.data)
+            alert(res.data.message)
+        } 
+        catch(err){
+            const msg = err.response.data.message;
+            alert(msg)
         }
     }
   return (
@@ -55,6 +70,7 @@ const Loginform = () => {
                 <div className={form.but}>
                 <button onClick={handlesubmit}>Log in </button>
                 </div>
+                <p>First-time users must register before logging in <Link to={'/Register'}>Register Here</Link></p>
             </div>
         </div>
     </div>

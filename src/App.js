@@ -7,6 +7,8 @@ import './App.css';
 // import Aboutsection from './Pages/About/About'
 // import Shop from './Pages/Shop/Shop'
 import Routing from './Pages/Routing/Routing';
+import Register from './Registerform/Register';
+import Homesecondsame from './Sections/Homesection/Homesecondsame/Homesecondsame';
 // import Home from './Pages/Home/Home'
 // import Loginform from './Loginform/Loginform';
 // import Cart, { CartProvider } from '../src/Cart/CartContext';

@@ -6,7 +6,6 @@ const Shop = () => {
   return (
     <div>
         <Shopfirstsection />
-        <Shopsecondsection />
     </div>
   )
 }

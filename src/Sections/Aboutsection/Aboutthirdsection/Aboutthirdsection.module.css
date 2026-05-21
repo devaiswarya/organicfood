@@ -55,6 +55,7 @@
     font-family: var(--secondary-root);
     color: #5D5D5D;
     letter-spacing: 0.2px;
+    text-align: center;
 }
 .v2{
     font-size: 12px;

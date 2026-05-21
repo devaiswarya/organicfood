@@ -94,6 +94,10 @@
     gap: 10px;
     padding-left: 30px;
 }
+.three1 a{
+    text-decoration: none;
+    color: inherit;
+}
 .three2{
     /* border: 1px solid; */
     width: 50%;
@@ -121,6 +125,10 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 50px;
+}
+.foursub a{
+    text-decoration: none;
+    color: inherit;
 }
 .foursub1{
     /* border: 1px solid; */
@@ -162,6 +170,10 @@
     flex-direction: column;
     gap: 10px;
 }
+.fivechild a{
+    text-decoration: none;
+    color: inherit;
+}
 .organic{
     font-size: 28px;
     font-family: var(--secondary-root);
@@ -196,6 +208,10 @@
     flex-direction: column;
     gap: 10px;
     padding-left: 30px;
+}
+.sixsub a{
+    text-decoration: none;
+    color: inherit;
 }
 .f7{
     font-size: 28px;

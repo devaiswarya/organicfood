@@ -20,6 +20,10 @@
     flex-direction: column;
     gap: 10px;
 }
+.first a{
+    text-decoration: none;
+    color: inherit;
+}
 .second{
     position: absolute;
     right: 80px;
@@ -189,6 +193,10 @@
     width: 50%;
     padding: 30px;
     
+}
+.inchild a{
+    text-decoration: none;
+    color: inherit;
 }
 .herit{
     /* border: 1px solid ; */

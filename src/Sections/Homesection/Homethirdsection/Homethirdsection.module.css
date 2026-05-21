@@ -75,6 +75,10 @@
     align-items: center;
     background-color: #008000;
 }
+.in1first a{
+    text-decoration: none;
+    color: inherit;
+}
 .second{
     /* border: 1px solid blue; */
     background-color: #FCF7ED;

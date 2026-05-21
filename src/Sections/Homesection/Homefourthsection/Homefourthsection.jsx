@@ -4,6 +4,7 @@ import human from '../../../../src/assert/human.png'
 import whole from '../../../../src/assert/wholeveg.png'
 import juicebottle from '../../../../src/assert/bottlejuice.png'
 import graphes from '../../../../src/assert/graphes1.png'
+import { Link } from 'react-router-dom'
 const Homefourthsection = () => {
   return (
     <div className={object.wholeclass}>
@@ -12,7 +13,7 @@ const Homefourthsection = () => {
                 <p className={object.f1}>Get 15% discount on your first Purchase</p>
                 <p className={object.f2}>Donec sed mauris non quam molestie imperdiet.</p>
                 <p className={object.f2}>Integer ullamcorper, purus sit amet hendrerit tincidunt</p>
-                <p className={object.f3}>Shop Now</p>
+                <Link to={'/shop'}><p className={object.f3}>Shop Now</p></Link>
                 </div>
                 <div className={object.whole}>
                 <img src={whole} alt="" />
@@ -52,7 +53,7 @@ const Homefourthsection = () => {
             <div className={object.thirdchild1}>
                 <div className={object.inchild}>
                     <p className={object.m2}>Organic Juices</p>
-                    <p  className={object.m3}>Shop Now</p>
+                    <Link to={'/shop'}><p  className={object.m3}>Shop Now</p></Link>
                 </div>
                 <div className={object.herit}>
                     <img src={juicebottle} alt="" />
@@ -61,7 +62,7 @@ const Homefourthsection = () => {
             <div className={object.thirdchild2}>
                 <div className={object.inchild }>
                     <p className={object.m2}>Fresh Fruits</p>
-                    <p className={object.m3}>Shop Now</p>
+                    <Link to={'/shop'}><p className={object.m3}>Shop Now</p></Link>
                 </div>
                 <div className={object.herit}>
                     <img src={graphes} alt="" />

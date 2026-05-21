@@ -181,8 +181,6 @@ const navigate = useNavigate();
              </select>
              </div>
         </div>
-
-
         <div className={change.hint}>
             {results.map((items)=>(
                 <div className={change.result1} key={items._id}>

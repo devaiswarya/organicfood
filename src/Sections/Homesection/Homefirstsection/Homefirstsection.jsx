@@ -3,6 +3,7 @@ import high from './Homefirstsection.module.css'
 import icon from '../../../../src/assert/wholeveg.png'
 import icon1 from '../../../../src/assert/result13.png'
 import icon2 from '../../../../src/assert/corns.png'
+import { Link } from 'react-router-dom'
 // import icon3 from '../../../../src/assert/chilli.png'
 
 const Homefirstsection = () => {
@@ -29,7 +30,7 @@ const Homefirstsection = () => {
                 <div className={high.three}>
                     <div className={high.three1}>
                     <p className={high.f5}>Healthy Juices</p>
-                    <p className={high.f1}>show now</p>
+                    <Link to={'/shop'}><p className={high.f1}>show now</p></Link>
                     </div>
                     <div className={high.three2}>
                         <img src={icon1} alt="" />
@@ -38,7 +39,7 @@ const Homefirstsection = () => {
                 <div className={high.four}>
                     <div className={high.foursub}>
                         <p className={high.f6}>Farm Fresh</p>
-                        <p className={high.f1}>shop Now</p>
+                        <Link to={'/shop'}><p className={high.f1}>shop Now</p></Link>
                     </div>
                     <div className={high.foursub1}>
                         <img src={icon2} alt="" />
@@ -50,13 +51,13 @@ const Homefirstsection = () => {
                 <div className={high.five}>
                     <div className={high.fivechild}>
                         <p className={high.organic}>Organic Fruits</p>
-                        <p className={high.f1}>show Now</p>
+                        <Link to={'/shop'}><p className={high.f1}>show Now</p></Link>
                     </div>
                 </div>
                 <div className={high.six}>
                     <div className={high.sixsub}>
                     <p className={high.f7}>Organic Spices</p>
-                    <p className={high.f1}>Shop Now</p>
+                    <Link to={'/shop'}><p className={high.f1}>Shop Now</p></Link>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@ const Home = () => {
       <Homethirdsection />
       <Homesecondsame />
       <Homefourthsection />
-      <Homefive />
+      {/* <Homefive /> */}
       <Homesixthsection />
       
         
