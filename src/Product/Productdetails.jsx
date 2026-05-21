@@ -10,55 +10,55 @@ const ProductDetails = () => {
   // const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   // const {addToWishlist} = useContext(WishlistContext);
-  const  [product,setdata] = useState({})
+  const [product, setdata] = useState({})
 
-  const [quantity, setQuantity] = useState(1); 
+  const [quantity, setQuantity] = useState(1);
 
-  
-useEffect(()=>{
-  const getdata = async() => {
-    try{
-      const res = await axios.get(`http://127.0.0.1:8000/api/products/retrieve/${id}`)
-      setdata(res.data.data)
-      console.log(res.data)
+
+  useEffect(() => {
+    const getdata = async () => {
+      try {
+        const res = await axios.get(`http://127.0.0.1:8000/api/products/retrieve/${id}`)
+        setdata(res.data.data)
+        console.log(res.data)
+      }
+      catch (err) {
+        console.log(err)
+      }
     }
-    catch(err){
-      console.log(err)
-    }
-  }
-  getdata();
-},[])
-  
- 
+    getdata();
+  }, [id])
+
+
 
   const increaseQuantity = () => setQuantity(prev => prev + 1);
   const decreaseQuantity = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
 
 
-//   let relatedProducts = Data.filter(p =>p.sub?.toLowerCase().trim() === product.sub?.toLowerCase().trim() && p._id !== product._id);
-//   if (relatedProducts.length < 3) {
-//   const others = Data.filter(
-//     p =>
-//       p._id !== product._id &&
-//       !relatedProducts.includes(p)
-//   );
-//   relatedProducts = [...relatedProducts, ...others].slice(0, 3);
-// } 
-// else {
-//   relatedProducts = relatedProducts.slice(0, 3);
-// }
+  //   let relatedProducts = Data.filter(p =>p.sub?.toLowerCase().trim() === product.sub?.toLowerCase().trim() && p._id !== product._id);
+  //   if (relatedProducts.length < 3) {
+  //   const others = Data.filter(
+  //     p =>
+  //       p._id !== product._id &&
+  //       !relatedProducts.includes(p)
+  //   );
+  //   relatedProducts = [...relatedProducts, ...others].slice(0, 3);
+  // } 
+  // else {
+  //   relatedProducts = relatedProducts.slice(0, 3);
+  // }
 
 
   console.log("Current product:", product);
-// console.log("Related products:", relatedProducts);
+  // console.log("Related products:", relatedProducts);
 
   return (
     <div className={music.wholeclass}>
       <div className={music.firstclass}>
-        
+
         <div className={music.firstchild}>
           <div className={music.imageclass}>
-          <img src={product.image} alt={product.title}  />
+            <img src={product.image} alt={product.title} />
           </div>
         </div>
         <div className={music.secondchild}>
@@ -72,7 +72,7 @@ useEffect(()=>{
           <div className={music.add}>
             <p onClick={decreaseQuantity} className={music.buts}>-</p>
             <span style={{ margin: '0 10px' }}>{quantity}</span>
-            <p onClick={increaseQuantity}  className={music.buts}>+</p>
+            <p onClick={increaseQuantity} className={music.buts}>+</p>
           </div>
           <p onClick={() => addToCart({ ...product, quantity })} className={music.one}>
             Add to Cart
@@ -80,8 +80,8 @@ useEffect(()=>{
         </div>
       </div>
 
-      
-      
+
+
       {/* {relatedProducts.length > 0 && (
         <div className={music.two}>
             <div className={music.relate}>
@@ -113,7 +113,7 @@ useEffect(()=>{
         
       )} */}
 
-    
+
     </div>
   );
 };

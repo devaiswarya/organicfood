@@ -26,16 +26,7 @@ const Navbar = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
 
-    const getdata = async () => {
-        try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/products/fetched?find=${find}`)
-            setname(res.data.data)
-            console.log(res.data)
-        }
-        catch (err) {
-            console.log(err)
-        }
-    }
+   
     const showdata = async(id) => {
         try{
             const res=await axios.get(`http://127.0.0.1:8000/api/products/retrieve/${id}`)
@@ -50,9 +41,23 @@ const Navbar = () => {
     }
 
     useEffect(() => {
+         const getdata = async () => {
+        try {
+            const res = await axios.get(`http://127.0.0.1:8000/api/products/fetched?find=${find}`)
+            setname(res.data.data)
+            console.log(res.data)
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
         getdata();
-        showdata();
-    }, [])
+        
+    }, [find])
+
+    // useEffect(()=>{
+    //     showdata();
+    // },[])
     return (
         <div>
             <div className={styles.wholeclass}>
