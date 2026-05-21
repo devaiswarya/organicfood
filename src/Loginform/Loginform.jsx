@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import form from './Loginform.module.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import Register from '../Registerform/Register'
+
 const Loginform = () => {
 
     const [name,setname] = useState('')

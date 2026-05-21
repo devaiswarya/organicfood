@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import Data from '../Data/Data'; 
+import { useParams } from 'react-router-dom';
 import { CartContext } from '../Cart/CartContext';
 import {WishlistContext} from '../Wishlist/WishlistContext'
 import music from './Productdetails.module.css'
@@ -8,7 +7,7 @@ import axios from 'axios';
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const {addToWishlist} = useContext(WishlistContext);
   const  [product,setdata] = useState({})

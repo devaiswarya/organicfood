@@ -18,7 +18,6 @@ const Navbar = () => {
     const [name, setname] = useState([])
 
     const navigate = useNavigate();
-    const { id } = useParams();
 
     const { wishlistItems } = useContext(WishlistContext);
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Bestdealsfirstsection from '../../Sections/Bestdealssection/Bestdealsfirstsection'
+// import Bestdealsfirstsection from '../../Sections/Bestdealssection/Bestdealsfirstsection'
 
 const Bestdeals = () => {
   return (

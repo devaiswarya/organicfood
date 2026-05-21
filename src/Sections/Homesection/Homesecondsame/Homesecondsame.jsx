@@ -6,12 +6,12 @@ import 'swiper/css';
 import { Navigation} from 'swiper/modules';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import bottlejuices from '../../../../src/assert/result13.png'
-import spices from '../../../../src/assert/result4.png'
-import juices from '../../../../src/assert/result7.png'
-import orange from '../../../../src/assert/result2.png'
-import mango from '../../../../src/assert/mango.png'
-import bathandwash from '../../../../src/assert/bathandhandwash.png'
+// import bottlejuices from '../../../../src/assert/result13.png'
+// import spices from '../../../../src/assert/result4.png'
+// import juices from '../../../../src/assert/result7.png'
+// import orange from '../../../../src/assert/result2.png'
+// import mango from '../../../../src/assert/mango.png'
+// import bathandwash from '../../../../src/assert/bathandhandwash.png'
 import CartContext from '../../../Cart/CartContext';
 import { WishlistContext } from '../../../Wishlist/WishlistContext';
 import axios from 'axios';
