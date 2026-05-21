@@ -9,7 +9,7 @@ const ProductDetails = () => {
   const { id } = useParams();
   // const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
-  const {addToWishlist} = useContext(WishlistContext);
+  // const {addToWishlist} = useContext(WishlistContext);
   const  [product,setdata] = useState({})
 
   const [quantity, setQuantity] = useState(1); 

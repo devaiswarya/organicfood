@@ -63,7 +63,7 @@ const Register = () => {
             return ;
         }
         console.log("Register Successfully")
-        setmessage("Register Successfully")
+        // setmessage("Register Successfully")
         const newData = {
             name:name,
             email:email,
