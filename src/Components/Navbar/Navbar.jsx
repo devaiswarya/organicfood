@@ -8,7 +8,7 @@ import { WishlistContext } from '../../Wishlist/WishlistContext'
 import CartContext from '../../Cart/CartContext'
 import { NavLink } from "react-router-dom";
 import axios from 'axios'
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 

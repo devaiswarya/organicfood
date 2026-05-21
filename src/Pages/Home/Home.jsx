@@ -4,7 +4,7 @@ import Homesecondsection from '../../Sections/Homesection/Homesecondsection/Home
 import Homethirdsection from '../../Sections/Homesection/Homethirdsection/Homethirdsection'
 import Homefourthsection from '../../Sections/Homesection/Homefourthsection/Homefourthsection'
 import Homesixthsection from '../../Sections/Homesection/Homesixthsection/Homesixthsection'
-import Homefive from '../../Sections/Homesection/Homefive/Homefive'
+// import Homefive from '../../Sections/Homesection/Homefive/Homefive'
 import Homesecondsame from '../../Sections/Homesection/Homesecondsame/Homesecondsame'
 
 const Home = () => {

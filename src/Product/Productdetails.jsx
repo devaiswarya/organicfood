@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../Cart/CartContext';
-import {WishlistContext} from '../Wishlist/WishlistContext'
+// import {WishlistContext} from '../Wishlist/WishlistContext'
 import music from './Productdetails.module.css'
 import axios from 'axios';
 
@@ -14,6 +14,8 @@ const ProductDetails = () => {
 
   const [quantity, setQuantity] = useState(1); 
 
+  
+useEffect(()=>{
   const getdata = async() => {
     try{
       const res = await axios.get(`http://127.0.0.1:8000/api/products/retrieve/${id}`)
@@ -24,7 +26,6 @@ const ProductDetails = () => {
       console.log(err)
     }
   }
-useEffect(()=>{
   getdata();
 },[])
   
